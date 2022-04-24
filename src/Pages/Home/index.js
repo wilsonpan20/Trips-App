@@ -21,7 +21,7 @@ export default function Home(){
                 <li key={trip.id}>
                     <img src={trip.image} alt={trip.title} />
                     <strong>{trip.title}</strong>
-                    <span> Staus: {trip.status ? 'Disponivel' : 'Indisponivel'}</span>
+                    <span> Status: {trip.status ? 'Disponivel' : 'Indisponivel'}</span>
                     <button
                     type="button"
                     onClick={()=>{}}
