@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './Pages/Home';
-import Reservas from './Pages/Reservas';
+import Home from './pages/Home';
+import Reservas from './pages/Reservas';
 
 export default function Routes(){
   return(

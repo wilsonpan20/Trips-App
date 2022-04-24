@@ -1,9 +1,11 @@
 import React,{useState,useEffect} from "react";
+import { useDispatch } from "react-redux";
 import api from '../../services/api'
 import {MdOutlineFlightTakeoff} from 'react-icons/md'
 import './style.css'
 
 export default function Home(){
+    const dispatch = useDispatch()
   const [trips,setTrips] = useState([]);
 
   useEffect(()=>{
@@ -15,6 +17,12 @@ export default function Home(){
       loadApi()
   },[])
 
+  function handleAdd(trip){
+      console.log(trip);
+  }
+
+
+
     return(
         <div className="box">
             {trips.map(trip=>(
@@ -24,7 +32,7 @@ export default function Home(){
                     <span> Status: {trip.status ? 'Disponivel' : 'Indisponivel'}</span>
                     <button
                     type="button"
-                    onClick={()=>{}}
+                    onClick={()=>handleAdd(trip)}
                     >
                         <div>
                             <MdOutlineFlightTakeoff size={16} color="#fff"/>
