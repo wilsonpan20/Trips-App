@@ -27,7 +27,7 @@ export function updateAmountRequest(id, amount){
   }
 }
 
-export function updateAmountSucccess(id, amount){
+export function updateAmountSuccess(id, amount){
   return {
     type: 'UPDATE_RESERVE_SUCCESS',
     id,
